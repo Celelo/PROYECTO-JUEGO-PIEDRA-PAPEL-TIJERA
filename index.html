@@ -4,10 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/style.css">
-    <title>Document</title>
+    <!-- SCRIPT OF TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Juego</title>
 </head>
 <body>
-    
+    <!-- INIT HEADER -->
+    <header>
+        <h1>
+            Piedra, papel o tijera
+        </h1>
+    </header>
+        <!-- END HEADER -->
+
+            <!-- INIT MAIN -->
+            <main>
+                <p class="instructions" id="instructions">
+                    El primero en llegar a 5 puntos gana.
+                </p>
+
+                <div class="marker">
+                    <p class="name name-player">Jugador</p>
+                    <p class="name name-computer">Computadora</p>
+                    <p class="points">
+                        <span id="pointsUser">0</span>
+                        <span>-</span>
+                        <span id="pointsComputer">0</span>
+                    </p>
+                </div>
+
+                <!-- armors -->
+                <div class="choose-armor" id="chooseArmor">
+                    <p>Eleji tu arma para el proximo turno</p>
+                    <div class="weapons">
+                        <button class="weapon" id="piedra 🗿">🗿</button>
+                        <button class="weapon" id="papel 📋">📋</button>
+                        <button class="weapon" id="tijera ✂">✂</button>
+                    </div>
+                </div>
+            </main>
+            <!-- END MAIN -->
+
+
     <script src="JavaScript/script.js"></script>
 </body>
 </html>
