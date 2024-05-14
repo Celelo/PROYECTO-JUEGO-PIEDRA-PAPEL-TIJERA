@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,59 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Juego</title>
 </head>
-<body>
+
+<body class="bg-[#26233b]">
     <!-- INIT HEADER -->
-    <header>
-        <h1>
+    <header class="flex w-full h-24 bg-white justify-center rounded-b-full">
+        <h1 class="text-3xl font-mono italic font-black py-5 text-[#26233b]">
             Piedra, papel o tijera
         </h1>
     </header>
-        <!-- END HEADER -->
+    <!-- END HEADER -->
+
+    <!-- INIT MAIN -->
+    <main class="text-white">
+
+        <div class="flex justify-center py-7">
+            <p class="instructions" id="instructions" class="justify-center">
+                El primero en llegar a 5 puntos gana.
+            </p>
+        </div>
+
+        <div class="marker flex justify-center">
+            <p class="name name-player mt-4 border-2 border-[#dcc58f] rounded-2xl py-2 px-3 mr-2">Jugador :</p>
+            <div class="points py-5 px-16 bg-[#dcc58f] rounded-3xl">
+                <span id="pointsUser">0</span>
+                <span>-</span>
+                <span id="pointsComputer">0</span>
+            </div>
+            <p class="name name-computer mt-4 border-2 border-[#dcc58f] rounded-2xl py-2 px-3 ml-2">: Computadora </p>
+        </div>
+
+        <!-- armors -->
+        <div class="choose-armor " id="chooseArmor">
+            <p class="flex justify-center pt-9 text-2xl">Eleji tu arma para el proximo turno :</p>
+            <div class="weapons flex justify-center mt-4">
+                <button class="weapon p-5 border-2 border-[#dcc58f] mr-5 bg-white rounded-2xl mt-3" id="piedra 🗿">🗿</button>
+                <button class="weapon p-5 border-2 border-[#dcc58f] mr-5 bg-white rounded-2xl mt-3" id="papel 📋">📋</button>
+                <button class="weapon p-5 border-2 border-[#dcc58f] bg-white rounded-2xl mt-3" id="tijera ✂">✂</button>
+            </div>
+        </div>
+
+        <div class="message flex justify-center mt-9" id="message">
+            <div class="text-center">
+                <p class="choice mb-4" id="choiceUser">Usaste <span class="p-1 border rounded-lg bg-[#dcc58f] text-black">piedra 🗿</span> </p>
+                <p class="choice mb-4" id="choiceComputer"> y la computadora uso <span class="p-1 border rounded-lg bg-[#dcc58f] text-black">papel 📋</span></p>
+                <p class="win">Ganaste un punto 🔥</p>
+            </div>
+        </div>
+        <div class="flex justify-center mt-4">
+            <button class="btn border-2 p-1 rounded-lg bg-white text-[#26233b] font-black" id="restart">Reiniciar juego</button>
+        </div>
+    </main>
+    <!-- END MAIN -->
+
     <script src="JavaScript/script.js"></script>
 </body>
+
 </html>
